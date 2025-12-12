@@ -1,25 +1,17 @@
-import { StatusBar } from 'expo-status-bar';
-import {
-  SafeAreaView,
-  StyleSheet,
-  Platform,
-  StatusBar as RNStatusBar,
-} from 'react-native';
-import Header from './components/Header';
-import { useState } from 'react';
-import { Todo } from './types/Todo';
-import TodoInput from './components/todos/TodoInput';
-import TodoList from './components/todos/TodoList';
+import React, { useState } from 'react';
+import { SafeAreaView, StyleSheet, StatusBar } from 'react-native';
+import Header from './src/components/Header';
+import GithubGrass from './src/components/GithubGrass';
 
 export default function App() {
-  const [todos, setTodos] = useState<Todo[]>([]);
+  const [githubId, setGithubId] = useState('rhehfl');
 
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar />
+      <StatusBar barStyle="dark-content" />
       <Header />
-      <TodoInput setTodo={setTodos} />
-      <TodoList todos={todos} />
+
+      <GithubGrass />
     </SafeAreaView>
   );
 }
@@ -27,7 +19,9 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    paddingTop: Platform.OS === 'android' ? RNStatusBar.currentHeight : 0,
+    backgroundColor: '#F2F4F6',
+  },
+  grassContainer: {
+    padding: 30,
   },
 });
