@@ -13,7 +13,6 @@ const styles = StyleSheet.create({
   header: {
     padding: 20,
   },
-
   text: {
     fontSize: 24,
   },

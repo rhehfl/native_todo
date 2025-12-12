@@ -8,11 +8,13 @@ import {
   StatusBar as RNStatusBar,
 } from 'react-native';
 import Header from './components/Header';
+import TodoList from './components/TodoList';
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar />
       <Header />
+      <TodoList />
     </SafeAreaView>
   );
 }
